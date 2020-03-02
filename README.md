@@ -1,1 +1,0 @@
-# ryanwilliamquinn.github.io
