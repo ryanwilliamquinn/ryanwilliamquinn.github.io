@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>Maven Notes | Your awesome title</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Your awesome title" />
+<meta property="og:title" content="Maven Notes" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="Build Lifecycle" />
+<meta property="og:description" content="Build Lifecycle" />
+<link rel="canonical" href="http://localhost:4000/maven/java/tools/2020/03/01/maven-notes.html" />
+<meta property="og:url" content="http://localhost:4000/maven/java/tools/2020/03/01/maven-notes.html" />
 <meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-01T18:36:49-08:00" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"http://localhost:4000/","headline":"Your awesome title","name":"Your awesome title","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"http://localhost:4000/maven/java/tools/2020/03/01/maven-notes.html","headline":"Maven Notes","dateModified":"2020-03-01T18:36:49-08:00","datePublished":"2020-03-01T18:36:49-08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/maven/java/tools/2020/03/01/maven-notes.html"},"description":"Build Lifecycle","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
 <body><header class="site-header" role="banner">
@@ -33,16 +35,33 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Mar 1, 2020</span>
-        <h3>
-          <a class="post-link" href="/maven/java/tools/2020/03/01/maven-notes.html">
-            Maven Notes
-          </a>
-        </h3></li></ul>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Maven Notes</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-03-01T18:36:49-08:00" itemprop="datePublished">Mar 1, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="build-lifecycle">Build Lifecycle</h2>
+
+<blockquote>
+  <p>The process for building and distributing a particular artifact is clearly defined</p>
+</blockquote>
+
+<p>A build lifecycle is made up of build phases. The default lifecycle is made up of the phases: <code class="language-plaintext highlighter-rouge">validate</code> <code class="language-plaintext highlighter-rouge">compile</code> <code class="language-plaintext highlighter-rouge">test</code> <code class="language-plaintext highlighter-rouge">package</code> <code class="language-plaintext highlighter-rouge">verify</code> <code class="language-plaintext highlighter-rouge">install</code> <code class="language-plaintext highlighter-rouge">deploy</code>.</p>
+
+<p>If you aren’t sure what to run, <code class="language-plaintext highlighter-rouge">mvn verify</code> is a good candidate. It will run all the phases before it, so you will get unit tests, the artifact built, and integration tests run. <em>Note that <code class="language-plaintext highlighter-rouge">clean</code> is not part of the default lifecycle</em>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">mvn clean deploy</code> is the standard command in a build environment.</p>
+
+<p>If a project contains subprojects, maven traverses into every subproject and executes the same command run on the parent project.</p>
+
+
+  </div><a class="u-url" href="/maven/java/tools/2020/03/01/maven-notes.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
